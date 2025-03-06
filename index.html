@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Emprestimos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link href="src/styles/output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-100">
+    <div class="p-4 bg-white m-4 rounded-md shadow-md items-center">
+        <h1 class="text-xl font-bold">CALCULADORA DE EMPRÉSTIMOS</h1>
+        <div class="flex flex-row justify-around gap-8">
+            <!--CAMPOS PARA PREENCHER-->
+            <div class="flex flex-col gap-4 w-full">
+                <!--QUANTIA DO EMPRESTIMO-->
+                <div class="flex flex-col gap-2">
+                    <label for="">Quantia do emprestimo (R$)</label>
+                    <div class="relative">
+                        <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">paid</span>
+                        <input id="quantia" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                    </div> 
+                </div>
+                <!--JUROS ANUAIS-->
+                <div class="flex flex-col gap-2">
+                    <label for="">Juros anuais(%)</label>
+                    <div class="relative">
+                        <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">percent</span>
+                        <input id="_juros" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                    </div>
+                </div>
+                <!---ANOS-->
+                <div class="flex flex-col gap-2">
+                    <label for="">Período de reembolso (ano)</label>
+                    <div class="relative">
+                        <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">calendar_month</span>
+                        <input id="anos" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                    </div>
+                </div>
+                <!--CEP-->
+                <div class="flex flex-col gap-2">
+                    <label for="">CEP (para encontrar credores)</label>
+                    <div>
+                        <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">location_on</span>
+                        <input id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                    </div>
+                </div>
+                <button class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
+                <hr>
+                <h1 class="text-lg font-bold">Pagamentos aproximados</h1>
+                <!--PAGAMENTOS-->
+                <ul class="font-medium text-blue-600">
+                    <li class="flex items-center gap-2">
+                        <span class="material-icons">calendar_month</span>
+                        <span id="pagamento_mensalidade">Messalidade: </span> 
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-icons">payments</span>
+                        <span id="pagamento_total">Total a pagar:</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-icons">percent</span>
+                        <span id="juros_total">Total de juros: </span>
+                    </li>
+                </ul>
+            </div>
+            <!--GRÁFICOS-->
+            <div class="bg-red-500 w-full rounded-lg">
+                <canvas id="graph" width="400" height="250">
+
+                </canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
