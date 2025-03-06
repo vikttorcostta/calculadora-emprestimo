@@ -1,7 +1,5 @@
 function calcular () {
 
-    // pesquisa os elementos de entrada e saida no documento HTML
-
     let quantia = document.getElementById("quantia");
     let _juros = document.getElementById("_juros");
     let anos = document.getElementById("anos");
@@ -22,7 +20,7 @@ function calcular () {
         pagamento_mensalidade.innerHTML = mensal.toFixed(2);
         pagamento_total.innerHTML = (mensal * pagamentos).toFixed(2);
         juros_total.innerHTML = ((mensal * pagamentos) - principal_quantia).toFixed(2);
-        save(quantia.value, _juros.value, anos.value, cep.value);
+        //save(quantia.value, _juros.value, anos.value, cep.value);
 
         // função anuncio de credoras
 
@@ -61,7 +59,6 @@ window.onload = function () {
     }
 };
 
-
-function getCredoras() {
+ function getCredoras() {
     if(!window.XMLHttpRequest) return;
 }

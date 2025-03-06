@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
     <link href="src/styles/output.css" rel="stylesheet">
-    <script src="src/js/javascript.js"></script>
+    <script src="src/js/calcular.js"></script>
+    <script src="src/js/cep.js"></script>
 </head>
 <body class="bg-slate-100">
     <div class="p-4 bg-white m-4 rounded-md shadow-md items-center">
@@ -32,41 +33,40 @@
                     </div>
                 </div>
                 <!---ANOS-->
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-4">
                     <label for="">Período de reembolso (ano)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">calendar_month</span>
                         <input onchange="calcular()" id="anos" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
+                    <button onclick="calcular()" type="button" class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
                 </div>
                 <!--CEP-->
                 <div class="flex flex-col gap-2">
                     <label for="">CEP (para encontrar credores)</label>
-                    <div>
+                    <div class="flex flex-col gap-4">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">location_on</span>
                         <div class="flex gap-2">
                             <input onchange="calcular()" id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
-                            <button class="cursor-pointer bg-blue-500 p-2 rounded-md text-white font-medium hover:bg-blue-600">Consultar</button>
+                            <button onclick="buscarCep()" type="submit" class="cursor-pointer bg-blue-500 p-2 rounded-md text-white font-medium hover:bg-blue-600">Consultar</button>
                         </div>
-                        
+                        <div id="resultado"></div>
                     </div>
                 </div>
-                <button onclick="calcular()" type="button" class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
-                <hr>
                 <h1 class="text-xl font-bold">PAGAMENTOS APROXIMADOS</h1>
                 <!--PAGAMENTOS-->
-                <ul class="font-medium text-blue-600 flex flex-col gap-2">
+                <ul class="text-md font-medium text-blue-600 flex flex-col gap-2">
                     <li class="flex items-center gap-2">
                         <span class="material-icons">paid</span>
-                        <p>Mensalidade: <span id="pagamento_mensalidade"></span> </p>
+                        <p>Mensalidade: R$ <span id="pagamento_mensalidade"></span> </p>
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="material-icons">paid</span>
-                        <p>Total a pagar: <span id="pagamento_total"></span> </p>
+                        <p>Total a pagar: R$ <span id="pagamento_total"></span> </p>
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="material-icons">paid</span>
-                        <p>Total de Juros: <span id="juros_total"></span></p>
+                        <p>Total de Juros: R$ <span id="juros_total"></span></p>
                     </li>
                 </ul>
             </div>
