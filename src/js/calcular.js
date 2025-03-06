@@ -1,4 +1,4 @@
-function calcular () {
+function calcular() {
 
     let quantia = document.getElementById("quantia");
     let _juros = document.getElementById("_juros");
@@ -25,8 +25,8 @@ function calcular () {
         // função anuncio de credoras
 
         try {
-        
-        } catch (error) {}
+
+        } catch (error) { }
 
         // função grafico
 
@@ -41,7 +41,7 @@ function calcular () {
 }
 
 
-function salvar (quantia, _juros, anos, cep) {
+function salvar(quantia, _juros, anos, cep) {
     if (window.localStorage) {
         localStorage.loan_quantia = quantia;
         localStorage.loan_juros = _juros;
@@ -59,6 +59,6 @@ window.onload = function () {
     }
 };
 
- function getCredoras() {
-    if(!window.XMLHttpRequest) return;
+function getCredoras() {
+    if (!window.XMLHttpRequest) return;
 }

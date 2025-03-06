@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Emprestimos</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="src/styles/output.css" rel="stylesheet">
     <script src="src/js/calcular.js"></script>
     <script src="src/js/cep.js"></script>
 </head>
+
 <body class="bg-slate-100">
     <div class="p-4 bg-white m-4 rounded-md shadow-md items-center">
         <h1 class="text-xl font-bold">CALCULADORA DE EMPRÉSTIMOS</h1>
@@ -21,15 +22,17 @@
                     <label for="">Quantia do emprestimo (R$)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">paid</span>
-                        <input onchange="calcular()" id="quantia" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
-                    </div> 
+                        <input onchange="calcular()" id="quantia" type="number"
+                            class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                    </div>
                 </div>
                 <!--JUROS ANUAIS-->
                 <div class="flex flex-col gap-2">
                     <label for="">Juros anuais(%)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">percent</span>
-                        <input onchange="calcular()" id="_juros" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="_juros" type="number"
+                            class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
                 </div>
                 <!---ANOS-->
@@ -37,9 +40,11 @@
                     <label for="">Período de reembolso (ano)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">calendar_month</span>
-                        <input onchange="calcular()" id="anos" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="anos" type="number"
+                            class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
-                    <button onclick="calcular()" type="button" class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
+                    <button onclick="calcular()" type="button"
+                        class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
                 </div>
                 <!--CEP-->
                 <div class="flex flex-col gap-2">
@@ -47,8 +52,10 @@
                     <div class="flex flex-col gap-4">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">location_on</span>
                         <div class="flex gap-2">
-                            <input onchange="calcular()" id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
-                            <button onclick="buscarCep()" type="submit" class="cursor-pointer bg-blue-500 p-2 rounded-md text-white font-medium hover:bg-blue-600">Consultar</button>
+                            <input onchange="calcular()" id="cep" type="text"
+                                class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                            <button onclick="buscarCep()" type="submit"
+                                class="cursor-pointer bg-blue-500 p-2 rounded-md text-white font-medium hover:bg-blue-600">Consultar</button>
                         </div>
                         <div id="resultado"></div>
                     </div>
@@ -79,4 +86,5 @@
         </div>
     </div>
 </body>
+
 </html>
