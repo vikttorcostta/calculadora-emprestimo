@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
     <link href="src/styles/output.css" rel="stylesheet">
+    <script src="src/js/javascript.js"></script>
 </head>
 <body class="bg-slate-100">
     <div class="p-4 bg-white m-4 rounded-md shadow-md items-center">
@@ -19,7 +20,7 @@
                     <label for="">Quantia do emprestimo (R$)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">paid</span>
-                        <input id="quantia" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="quantia" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div> 
                 </div>
                 <!--JUROS ANUAIS-->
@@ -27,7 +28,7 @@
                     <label for="">Juros anuais(%)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">percent</span>
-                        <input id="_juros" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="_juros" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
                 </div>
                 <!---ANOS-->
@@ -35,7 +36,7 @@
                     <label for="">Período de reembolso (ano)</label>
                     <div class="relative">
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">calendar_month</span>
-                        <input id="anos" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="anos" type="number" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
                 </div>
                 <!--CEP-->
@@ -43,25 +44,25 @@
                     <label for="">CEP (para encontrar credores)</label>
                     <div>
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">location_on</span>
-                        <input id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <input onchange="calcular()" id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
                     </div>
                 </div>
-                <button class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
+                <button onclick="calcular()" type="button" class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
                 <hr>
-                <h1 class="text-lg font-bold">Pagamentos aproximados</h1>
+                <h1 class="text-xl font-bold">PAGAMENTOS APROXIMADOS</h1>
                 <!--PAGAMENTOS-->
-                <ul class="font-medium text-blue-600">
+                <ul class="font-medium text-blue-600 flex flex-col gap-2">
                     <li class="flex items-center gap-2">
-                        <span class="material-icons">calendar_month</span>
-                        <span id="pagamento_mensalidade">Messalidade: </span> 
+                        <span class="material-icons">paid</span>
+                        <p>Mensalidade: <span id="pagamento_mensalidade"></span> </p>
                     </li>
                     <li class="flex items-center gap-2">
-                        <span class="material-icons">payments</span>
-                        <span id="pagamento_total">Total a pagar:</span>
+                        <span class="material-icons">paid</span>
+                        <p>Total a pagar: <span id="pagamento_total"></span> </p>
                     </li>
                     <li class="flex items-center gap-2">
-                        <span class="material-icons">percent</span>
-                        <span id="juros_total">Total de juros: </span>
+                        <span class="material-icons">paid</span>
+                        <p>Total de Juros: <span id="juros_total"></span></p>
                     </li>
                 </ul>
             </div>
