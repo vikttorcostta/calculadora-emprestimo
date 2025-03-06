@@ -44,7 +44,11 @@
                     <label for="">CEP (para encontrar credores)</label>
                     <div>
                         <span class="material-icons absolute mt-2.5 ml-2.5 text-blue-600">location_on</span>
-                        <input onchange="calcular()" id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                        <div class="flex gap-2">
+                            <input onchange="calcular()" id="cep" type="text" class="pl-10 bg-slate-100 border-2 border-slate-400 p-2 rounded-md w-full">
+                            <button class="cursor-pointer bg-blue-500 p-2 rounded-md text-white font-medium hover:bg-blue-600">Consultar</button>
+                        </div>
+                        
                     </div>
                 </div>
                 <button onclick="calcular()" type="button" class="bg-blue-500 p-2 rounded-md text-white font-medium cursor-pointer hover:bg-blue-600">Calcular</button>
