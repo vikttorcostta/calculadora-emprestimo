@@ -20,7 +20,7 @@ function calcular() {
         pagamento_mensalidade.innerHTML = mensal.toFixed(2);
         pagamento_total.innerHTML = (mensal * pagamentos).toFixed(2);
         juros_total.innerHTML = ((mensal * pagamentos) - principal_quantia).toFixed(2);
-        //save(quantia.value, _juros.value, anos.value, cep.value);
+        salvar(quantia.value, _juros.value, anos.value, cep.value);
 
         // função anuncio de credoras
 
